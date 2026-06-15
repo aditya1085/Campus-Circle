@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CampusCircle</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- HOME -->
+  <div id="homePage">
+    <nav>
+      <div class="logo">CampusCircle</div>
+      <ul class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#communities">Communities</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+      </ul>
+      <div class="nav-btns">
+        <button class="theme-btn" onclick="toggleTheme()">🌙</button>
+        <button class="login-btn" onclick="showLogin()">Login</button>
+        <button class="signup-btn" onclick="showSignup()">Sign Up</button>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Find Your People.</h1>
+        <h2>Study, Play & Explore Together.</h2>
+        <p>
+          Connect with students who share your interests,
+          build project teams, gaming squads, study circles,
+          travel groups and lifelong friendships.
+        </p>
+        <div class="hero-buttons">
+          <button class="primary-btn" onclick="showSignup()">Get Started</button>
+          <button class="secondary-btn">Learn More</button>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="https://cdn-icons-png.flaticon.com/512/4140/4140048.png">
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="stat-card"><h2>10K+</h2><p>Students</p></div>
+      <div class="stat-card"><h2>500+</h2><p>Communities</p></div>
+      <div class="stat-card"><h2>1200+</h2><p>Projects</p></div>
+      <div class="stat-card"><h2>50+</h2><p>Colleges</p></div>
+    </section>
+
+    <section class="features" id="features">
+      <h2>Why CampusCircle?</h2>
+      <div class="feature-grid">
+        <div class="card">📚 Find Study Partners</div>
+        <div class="card">💻 Build Project Teams</div>
+        <div class="card">🎮 Gaming Communities</div>
+        <div class="card">✈ Travel Buddies</div>
+        <div class="card">🏋 Fitness Groups</div>
+        <div class="card">🎵 Music Clubs</div>
+      </div>
+    </section>
+
+    <section class="communities" id="communities">
+      <h2>Popular Communities</h2>
+      <div class="community-grid">
+        <div class="community">💻 Coding Club</div>
+        <div class="community">🎮 Gaming Hub</div>
+        <div class="community">🚀 Startup Circle</div>
+        <div class="community">📚 Study Room</div>
+        <div class="community">🏋 Fitness Crew</div>
+        <div class="community">🎵 Music Society</div>
+      </div>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+      <div class="testimonial">
+        <h3>"Found my hackathon team through CampusCircle."</h3>
+        <br>
+        <p>- Team Code Warrior</p>
+      </div>
+    </section>
+
+    <footer>
+      <h3>CampusCircle</h3>
+      <p>Connecting Students Beyond Classrooms.</p>
+    </footer>
+  </div>
+
+  <!-- LOGIN -->
+  <div id="loginPage" class="hidden">
+    <div class="container">
+      <div class="auth-box">
+        <button class="back-btn" onclick="showHome()">← Back</button>
+        <h2>Welcome Back</h2>
+        <p class="subtitle">Login to continue</p>
+        <form>
+          <input type="email" placeholder="Email">
+          <input type="password" placeholder="Password">
+          <button class="auth-btn">Login</button>
+        </form>
+        <p class="switch-text">No account? <a href="#" onclick="showSignup()">Sign Up</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SIGNUP -->
+  <div id="signupPage" class="hidden">
+    <div class="container">
+      <div class="auth-box">
+        <button class="back-btn" onclick="showHome()">← Back</button>
+        <h2>Create Account</h2>
+        <p class="subtitle">Join CampusCircle</p>
+        <form onsubmit="welcome(event)">
+          <input type="text" placeholder="Full Name" required>
+          <input type="email" placeholder="Email" required>
+          <select>
+            <option>Student</option>
+            <option>Faculty</option>
+            <option>Alumni</option>
+          </select>
+          <input id="pass1" type="password" placeholder="Password" required>
+          <input id="pass2" type="password" placeholder="Confirm Password" required>
+          <button class="auth-btn">Create Account</button>
+        </form>
+        <p class="switch-text">Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
